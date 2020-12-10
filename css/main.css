@@ -225,7 +225,8 @@ input[type=submit] {
     @media (max-width: 75em) {
       .tempConverter .container {
         display: flex;
-        flex-direction: column; } }
+        flex-direction: column;
+        width: 90%; } }
     .tempConverter .container .content-visual svg {
       height: 20rem;
       width: 20rem; }
@@ -276,7 +277,8 @@ input[type=submit] {
     @media (max-width: 75em) {
       .cupConverter .container {
         display: flex;
-        flex-direction: column; } }
+        flex-direction: column;
+        width: 90%; } }
     .cupConverter .container .content-visual svg {
       height: 20rem;
       width: 20rem; }
