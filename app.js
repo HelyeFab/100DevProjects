@@ -13,6 +13,13 @@ navToggler.addEventListener("click", () => {
   navBar.classList.toggle("open");
 });
 
+
+window.addEventListener("mouseup", function (e) {
+  if (navBar.classList.contains("open")) {
+    navBar.classList.remove("open");
+  }
+});
+
 //! Temperature Converter
 
 const errorMsg = document.querySelector(".errorMsg");
@@ -48,27 +55,55 @@ convertBtn.addEventListener("click", (e) => {
   }
 });
 
-const cupDisplay = document.querySelector(".cup-display");
-// !Cup Converter
-cupBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-  const cupInput = document.querySelector("#cup").value;
+//! Text Converter
 
-  if (cupInput === "") {
-    errorMsg.classList.add("active");
-    cupDisplay.classList.remove("active");
-    errorMsg.innerText = "Please enter a number";
-  } else {
-    if ((errorMsg.innerText = "Please enter a number"))
-      errorMsg.classList.remove("active");
-    if (document.querySelector('#cupChoice1').checked) {
-      let cupConversion = parseInt(cupInput * 128);
-      cupDisplay.classList.add("active");
-      cupDisplay.innerText = ` ${cupConversion} gr`;
-    } else {
-      let cupConversion = parseInt(cupInput / 128);;
-      cupDisplay.classList.add("active");
-      cupDisplay.innerText = ` ${cupConversion} cup`;
+const textToConvert = document.getElementById('text');
+const textBtn = document.querySelector('.textBtn');
+
+
+textBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  const textConverted = textToConvert.value.toLowerCase();
+  textToConvert.value = '';
+  textToConvert.value = textConverted;
+
+
+  
+
+})
+
+//! Pokemon Trainer
+
+const pokeball = document.querySelectorAll('.content-visual-item');
+const pokeDisplayText = document.querySelector('.poke-displayText');
+
+console.log(pokeDisplayText);
+
+pokeball.forEach((el) => {
+  el.addEventListener('click', () => {
+    pokeDisplayText.innerText = '';
+    
+    document.querySelector('.poke-display img');
+    const pokeDisplay = document.querySelector(".poke-display img");
+    let randomFile = Math.floor(Math.random() * 3 + 1);
+    let randomPokemon = pokeDisplay.attributes[0].value = `/css/assets/img/File_${randomFile}.png`;
+    console.log(randomPokemon);
+ 
+    if (randomPokemon === '/css/assets/img/File_2.png') {
+      pokeDisplayText.innerHTML =
+        "<mark>Bulbasaur </mark><br> is going to be your friend";
+    } else if (randomPokemon === "/css/assets/img/File_1.png") {
+      pokeDisplayText.innerHTML =
+        "<mark>Pikachu </mark><br>is going to be your friend";
+    } else if (randomPokemon === "/css/assets/img/File_3.png") {
+      pokeDisplayText.innerHTML = "<mark>Charmander </mark> <br> is going to be your friend";
     }
-  }
+   
+    
+
+
+   
+
+
+  })
 });

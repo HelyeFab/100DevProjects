@@ -202,6 +202,7 @@ input[type=submit] {
 
 .tempConverter {
   min-height: 100vh;
+  width: 100%;
   background-image: linear-gradient(to right bottom, rgba(148, 99, 111, 0.301), rgba(129, 98, 52, 0.459)), url("/css/assets/img/bg.jpg");
   background-position: center;
   background-size: cover;
@@ -254,53 +255,75 @@ input[type=submit] {
 .active {
   opacity: 100; }
 
-.cupConverter {
-  margin-top: 4.8rem;
-  padding: 4.8rem;
+.textConverter {
+  padding: 3.2rem; }
+
+.text-field span {
+  display: inline-block;
+  margin-bottom: 3.2rem;
+  color: red; }
+
+.textBtn {
+  margin-top: 3.2rem; }
+
+.pokemonMachine {
+  background-color: yellow;
+  background-position: center;
+  background-size: cover;
+  background-repeat: repeat;
+  width: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center; }
-  .cupConverter .container {
-    background-color: #05a8aaff;
-    height: auto;
-    width: 75%;
-    padding: 3.2rem;
-    border-radius: .5rem;
-    display: grid;
-    grid-template-columns: 25% 25% 50%;
-    grid-template-rows: auto;
-    grid-gap: 2rem;
-    justify-items: center;
-    align-items: center;
-    font-size: 2rem; }
+  justify-content: space-evenly;
+  padding: 8rem; }
+  .pokemonMachine h2 {
+    margin-top: 9.6rem;
+    font-size: 4rem;
+    text-align: center; }
+
+.pokecontainer {
+  margin-top: 9.6rem;
+  display: flex;
+  width: 90%; }
+  @media (max-width: 75em) {
+    .pokecontainer {
+      display: flex;
+      flex-direction: column; } }
+  .pokecontainer .content-visual {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center; }
     @media (max-width: 75em) {
-      .cupConverter .container {
-        display: flex;
-        flex-direction: column; } }
-    .cupConverter .container .content-visual svg {
-      height: 20rem;
-      width: 20rem; }
-      @media (max-width: 37.5em) {
-        .cupConverter .container .content-visual svg {
-          height: 10rem;
-          width: 10rem; } }
+      .pokecontainer .content-visual {
+        margin: 4.8rem auto; } }
+    .pokecontainer .content-visual-item img {
+      display: inline-block;
+      height: 15rem;
+      width: 15rem;
+      cursor: pointer; }
+  .pokecontainer .poke-display {
+    margin-left: 4rem;
+    height: 60rem;
+    width: auto;
+    border: 3px solid black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center; }
+    .pokecontainer .poke-display span {
+      text-align: center; }
+    .pokecontainer .poke-display img {
+      display: inline-block;
+      height: 25rem;
+      width: 25rem;
+      border-radius: 50%; }
 
-.cup-display {
-  font-size: 3rem;
-  background-color: white;
-  padding: 3.2rem;
-  border: 1px solid #416D4E;
-  border-radius: .5rem;
-  box-shadow: inset -3px -3px 7px #cfcfcf73, inset 3px 3px 5px rgba(94, 104, 121, 0.37);
-  color: #F92814;
-  font-weight: 600;
-  opacity: 0;
-  transition: all .6s ease-in-out; }
+h3 {
+  font-size: 3rem; }
 
-.errorMsg {
-  font-size: 1.6rem;
-  color: #F92814;
-  opacity: 0; }
-
-.active {
-  opacity: 100; }
+mark {
+  color: red;
+  font-size: 5rem; }
