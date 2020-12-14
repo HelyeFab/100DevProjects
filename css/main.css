@@ -305,6 +305,7 @@ input[type=submit] {
       cursor: pointer; }
   .pokecontainer .poke-display {
     margin-left: 4rem;
+    padding: 3.2rem;
     height: 60rem;
     width: auto;
     border: 3px solid black;
