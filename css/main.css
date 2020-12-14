@@ -303,7 +303,7 @@ input[type=submit] {
       height: 15rem;
       width: 15rem;
       cursor: pointer; }
-      @media (max-width: 75em) {
+      @media (max-width: 37.5em) {
         .pokecontainer .content-visual-item img {
           height: 10rem;
           width: 10rem; } }
@@ -318,9 +318,10 @@ input[type=submit] {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center; }
-    @media (max-width: 75em) {
+    @media (max-width: 37.5em) {
       .pokecontainer .poke-display {
-        width: 20rem; } }
+        min-width: 25rem;
+        margin-left: 0; } }
     .pokecontainer .poke-display span {
       text-align: center; }
     .pokecontainer .poke-display img {
@@ -328,6 +329,10 @@ input[type=submit] {
       height: 25rem;
       width: 25rem;
       border-radius: 50%; }
+      @media (max-width: 37.5em) {
+        .pokecontainer .poke-display img {
+          height: 10rem;
+          width: 10rem; } }
 
 h3 {
   font-size: 3rem; }
@@ -335,3 +340,6 @@ h3 {
 mark {
   color: red;
   font-size: 5rem; }
+  @media (max-width: 37.5em) {
+    mark {
+      font-size: 3rem; } }
