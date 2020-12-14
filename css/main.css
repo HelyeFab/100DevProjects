@@ -303,6 +303,10 @@ input[type=submit] {
       height: 15rem;
       width: 15rem;
       cursor: pointer; }
+      @media (max-width: 75em) {
+        .pokecontainer .content-visual-item img {
+          height: 10rem;
+          width: 10rem; } }
   .pokecontainer .poke-display {
     margin-left: 4rem;
     padding: 3.2rem;
@@ -314,6 +318,9 @@ input[type=submit] {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center; }
+    @media (max-width: 75em) {
+      .pokecontainer .poke-display {
+        width: 20rem; } }
     .pokecontainer .poke-display span {
       text-align: center; }
     .pokecontainer .poke-display img {
