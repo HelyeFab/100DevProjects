@@ -17,7 +17,9 @@ navToggler.addEventListener("click", () => {
 window.addEventListener("mouseup", function (e) {
   if (navBar.classList.contains("open")) {
     navBar.classList.remove("open");
+    navTogglerBurger.classList.remove("open");
   }
+  
 });
 
 //! Temperature Converter
